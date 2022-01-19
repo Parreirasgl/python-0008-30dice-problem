@@ -46,11 +46,11 @@ for n in range(10000):
     list_quantity_each_face = []
 
 print(f"""
-Face 1 appeard {list_correct_results[0]} times; 
-face 2 appeard {list_correct_results[1]} times; 
-face 3 appeard {list_correct_results[2]} times; 
-face 4 appeard {list_correct_results[3]} times; 
-face 5 appeard {list_correct_results[4]} times; 
+Face 1 appeard {list_correct_results[0]} times. 
+face 2 appeard {list_correct_results[1]} times. 
+face 3 appeard {list_correct_results[2]} times. 
+face 4 appeard {list_correct_results[3]} times. 
+face 5 appeard {list_correct_results[4]} times. 
 face 6 appeard {list_correct_results[5]} times.
 """)
 print(f"This pattern occurred {counter} times during the simulation.")
