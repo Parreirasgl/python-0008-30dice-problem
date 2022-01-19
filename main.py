@@ -15,3 +15,16 @@
 # Suponha que, ao rolar 30 dados de 6 faces, obteve-se o resultado 100.
 # E suponha que uma das faces saiu 6 vezes.
 # Então, quantas vezes cada face saiu?
+
+from random import randint
+
+list = []
+list2 = []
+
+for n in range(10):
+    for n in range(30):
+        aleat = randint(1,6)
+        list.append(aleat)
+    sum1 = sum(list)
+    print(sum1)
+
