@@ -28,6 +28,14 @@ for n in range(10000):
     sum_dices = sum(list_a)
     if sum_dices == 100:
         print(sum_dices)
+        num1 = list_a.count(1)
+        num2 = list_a.count(2)
+        num3 = list_a.count(3)
+        num4 = list_a.count(4)
+        num5 = list_a.count(5)
+        num6 = list_a.count(6)
+        list_b = [num1, num2, num3, num4, num5, num6]
+        print(list_b)
     list_a = []
     list_b = []
 
