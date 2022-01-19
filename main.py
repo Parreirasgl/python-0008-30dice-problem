@@ -27,7 +27,6 @@ for n in range(10000):
         list_a.append(aleat)
     sum_dices = sum(list_a)
     if sum_dices == 100:
-        print(sum_dices)
         num1 = list_a.count(1)
         num2 = list_a.count(2)
         num3 = list_a.count(3)
@@ -35,9 +34,20 @@ for n in range(10000):
         num5 = list_a.count(5)
         num6 = list_a.count(6)
         list_b = [num1, num2, num3, num4, num5, num6]
-        print(list_b)
+        for n3 in list_b:
+            if n3 > 6:
+                list_b = []
+        if list_b.count(6) == 1:
+            print(f"""
+Face 1: {num1}, 
+face 2: {num2}, 
+face 3: {num3}, 
+face 4: {num4}, 
+face 5: {num5}, 
+face 6: {num6}.""")
     list_a = []
     list_b = []
+
 
 
 
