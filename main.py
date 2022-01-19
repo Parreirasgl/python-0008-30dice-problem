@@ -20,7 +20,7 @@ from random import randint
 
 list_30_dices = []
 list_quantity_each_face = []
-list_correct_result = []
+list_correct_results = []
 counter = 0
 
 for n in range(10000):
@@ -29,27 +29,28 @@ for n in range(10000):
         list_30_dices.append(random_dice)
     sum_30_dices = sum(list_30_dices)
     if sum_30_dices == 100:
-        num1 = list_30_dices.count(1)
-        num2 = list_30_dices.count(2)
-        num3 = list_30_dices.count(3)
-        num4 = list_30_dices.count(4)
-        num5 = list_30_dices.count(5)
-        num6 = list_30_dices.count(6)
-        list_quantity_each_face = [num1, num2, num3, num4, num5, num6]
+        quantity_face_1 = list_30_dices.count(1)
+        quantity_face_2 = list_30_dices.count(2)
+        quantity_face_3 = list_30_dices.count(3)
+        quantity_face_4 = list_30_dices.count(4)
+        quantity_face_5 = list_30_dices.count(5)
+        quantity_face_6 = list_30_dices.count(6)
+        list_quantity_each_face = [quantity_face_1, quantity_face_2, quantity_face_3,
+                                   quantity_face_4, quantity_face_5, quantity_face_6]
         if max(list_quantity_each_face) > 6:
                 list_quantity_each_face = []
         if list_quantity_each_face.count(6) == 1:
             counter += 1
-            list_correct_result = list_quantity_each_face
+            list_correct_results = list_quantity_each_face
     list_30_dices = []
     list_quantity_each_face = []
 
 print(f"""
-Face 1 appeard {list_correct_result[0]} times. 
-face 2 appeard {list_correct_result[1]} times. 
-face 3 appeard {list_correct_result[2]} times. 
-face 4 appeard {list_correct_result[3]} times. 
-face 5 appeard {list_correct_result[4]} times. 
-face 6 appeard {list_correct_result[5]} times.
+Face 1 appeard {list_correct_results[0]} times; 
+face 2 appeard {list_correct_results[1]} times; 
+face 3 appeard {list_correct_results[2]} times; 
+face 4 appeard {list_correct_results[3]} times; 
+face 5 appeard {list_correct_results[4]} times; 
+face 6 appeard {list_correct_results[5]} times.
 """)
 print(f"This pattern occurred {counter} times during the simulation.")
