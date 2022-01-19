@@ -34,8 +34,7 @@ for n in range(10000):
         num5 = list_30_dices.count(5)
         num6 = list_30_dices.count(6)
         list_quantity_each_face = [num1, num2, num3, num4, num5, num6]
-        for n3 in list_quantity_each_face:
-            if n3 > 6:
+        if max(list_quantity_each_face) > 6:
                 list_quantity_each_face = []
         if list_quantity_each_face.count(6) == 1:
             print(f"""
