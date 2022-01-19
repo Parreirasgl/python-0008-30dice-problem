@@ -18,13 +18,18 @@
 
 from random import randint
 
-list = []
-list2 = []
+list_a = []
+list_b = []
 
-for n in range(10):
-    for n in range(30):
-        aleat = randint(1,6)
-        list.append(aleat)
-    sum1 = sum(list)
-    print(sum1)
+for n in range(10000):
+    for n2 in range(30):
+        aleat = randint(1, 6)
+        list_a.append(aleat)
+    sum_dices = sum(list_a)
+    if sum_dices == 100:
+        print(sum_dices)
+    list_a = []
+    list_b = []
+
+
 
