@@ -18,26 +18,26 @@
 
 from random import randint
 
-list_a = []
-list_b = []
+list_30_dices = []
+list_quantity_each_face = []
 
 for n in range(10000):
     for n2 in range(30):
-        aleat = randint(1, 6)
-        list_a.append(aleat)
-    sum_dices = sum(list_a)
-    if sum_dices == 100:
-        num1 = list_a.count(1)
-        num2 = list_a.count(2)
-        num3 = list_a.count(3)
-        num4 = list_a.count(4)
-        num5 = list_a.count(5)
-        num6 = list_a.count(6)
-        list_b = [num1, num2, num3, num4, num5, num6]
-        for n3 in list_b:
+        random_dice = randint(1, 6)
+        list_30_dices.append(random_dice)
+    sum_30_dices = sum(list_30_dices)
+    if sum_30_dices == 100:
+        num1 = list_30_dices.count(1)
+        num2 = list_30_dices.count(2)
+        num3 = list_30_dices.count(3)
+        num4 = list_30_dices.count(4)
+        num5 = list_30_dices.count(5)
+        num6 = list_30_dices.count(6)
+        list_quantity_each_face = [num1, num2, num3, num4, num5, num6]
+        for n3 in list_quantity_each_face:
             if n3 > 6:
-                list_b = []
-        if list_b.count(6) == 1:
+                list_quantity_each_face = []
+        if list_quantity_each_face.count(6) == 1:
             print(f"""
 Face 1: {num1}, 
 face 2: {num2}, 
@@ -45,8 +45,8 @@ face 3: {num3},
 face 4: {num4}, 
 face 5: {num5}, 
 face 6: {num6}.""")
-    list_a = []
-    list_b = []
+    list_30_dices = []
+    list_quantity_each_face = []
 
 
 
