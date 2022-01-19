@@ -20,6 +20,8 @@ from random import randint
 
 list_30_dices = []
 list_quantity_each_face = []
+list_correct_result = []
+counter = 0
 
 for n in range(10000):
     for n2 in range(30):
@@ -37,16 +39,17 @@ for n in range(10000):
         if max(list_quantity_each_face) > 6:
                 list_quantity_each_face = []
         if list_quantity_each_face.count(6) == 1:
-            print(f"""
-Face 1: {num1}, 
-face 2: {num2}, 
-face 3: {num3}, 
-face 4: {num4}, 
-face 5: {num5}, 
-face 6: {num6}.""")
+            counter += 1
+            list_correct_result = list_quantity_each_face
     list_30_dices = []
     list_quantity_each_face = []
 
-
-
-
+print(f"""
+Face 1 appeard {list_correct_result[0]} times. 
+face 2 appeard {list_correct_result[1]} times. 
+face 3 appeard {list_correct_result[2]} times. 
+face 4 appeard {list_correct_result[3]} times. 
+face 5 appeard {list_correct_result[4]} times. 
+face 6 appeard {list_correct_result[5]} times.
+""")
+print(f"This pattern occurred {counter} times during the simulation.")
