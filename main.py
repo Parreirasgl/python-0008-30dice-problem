@@ -22,6 +22,7 @@ def generate_list_30_dices():
         list_30_dices.append(random_dice)
     return
 
+
 def generate_list_quantity_each_face():
     list_quantity_each_face.append(list_30_dices.count(1))
     list_quantity_each_face.append(list_30_dices.count(2))
@@ -45,11 +46,11 @@ for n in range(NUMBER_SIMULATIONS):
     sum_30_dices = sum(list_30_dices)
     if sum_30_dices == 100:
         generate_list_quantity_each_face()
-        if max(list_quantity_each_face) > 6:
-                list_quantity_each_face = []
-        if list_quantity_each_face.count(6) == 1:
+        if max(list_quantity_each_face) == 6 and list_quantity_each_face.count(6) == 1:
             counter += 1
             list_correct_results = list_quantity_each_face
+        else:
+            list_quantity_each_face = []
     list_30_dices = []
     list_quantity_each_face = []
 
