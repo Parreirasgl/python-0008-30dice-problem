@@ -16,17 +16,23 @@
 # E suponha que uma das faces saiu 6 vezes.
 # Então, quantas vezes cada face saiu?
 
+def generate_list_30_dices():
+    for n2 in range(30):
+        random_dice = randint(1, 6)
+        list_30_dices.append(random_dice)
+    return
+
+
 from random import randint
 
+NUMBER_SIMULATIONS = 10000
 list_30_dices = []
 list_quantity_each_face = []
 list_correct_results = []
 counter = 0
 
-for n in range(10000):
-    for n2 in range(30):
-        random_dice = randint(1, 6)
-        list_30_dices.append(random_dice)
+for n in range(NUMBER_SIMULATIONS):
+    generate_list_30_dices()
     sum_30_dices = sum(list_30_dices)
     if sum_30_dices == 100:
         quantity_face_1 = list_30_dices.count(1)
