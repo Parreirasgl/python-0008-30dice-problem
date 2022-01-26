@@ -1,6 +1,6 @@
 # I found a math problem and thought it would be
 # possible to solve it through a computer simulation.
-# So i developed this simulation to solve it.
+# So I developed this simulation to solve it.
 # The problem is:
 # Suppose that when rolling 30 6-sided dice, the result was 100.
 # And suppose that one of the faces appeared 6 times.
