@@ -17,21 +17,18 @@
 # Então, quantas vezes cada face saiu?
 
 def generate_list_30_dices():
-    for n2 in range(30):
+    for n in range(30):
         random_dice = randint(1, 6)
         list_30_dices.append(random_dice)
     return
 
 def generate_list_quantity_each_face():
-    quantity_face_1 = list_30_dices.count(1)
-    quantity_face_2 = list_30_dices.count(2)
-    quantity_face_3 = list_30_dices.count(3)
-    quantity_face_4 = list_30_dices.count(4)
-    quantity_face_5 = list_30_dices.count(5)
-    quantity_face_6 = list_30_dices.count(6)
-    global list_quantity_each_face
-    list_quantity_each_face = [quantity_face_1, quantity_face_2, quantity_face_3,
-                               quantity_face_4, quantity_face_5, quantity_face_6]
+    list_quantity_each_face.append(list_30_dices.count(1))
+    list_quantity_each_face.append(list_30_dices.count(2))
+    list_quantity_each_face.append(list_30_dices.count(3))
+    list_quantity_each_face.append(list_30_dices.count(4))
+    list_quantity_each_face.append(list_30_dices.count(5))
+    list_quantity_each_face.append(list_30_dices.count(6))
     return
 
 
